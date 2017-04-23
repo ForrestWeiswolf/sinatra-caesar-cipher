@@ -10,7 +10,8 @@ get '/encrypt' do
 	shift = params["Shift"]
 	unless message.nil? | shift.nil?
 		shift = shift.to_i
+		shift *= -1 if params["mode"] == "Decrypt"
 		encrypted_message = caesar(message, shift)
 	end
-	erb :encrypted, :locals => {:encrypted_message => encrypted_message}
+	erb :result, :locals => {:encrypted_message => encrypted_message, :mode => params["mode"]}
 end
