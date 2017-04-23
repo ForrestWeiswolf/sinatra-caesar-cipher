@@ -1,0 +1,30 @@
+html {
+  background-color: #CCCCCC;
+}
+
+body {
+  width: 90%;
+  margin: auto;
+  background-color: #FFFFFF;
+  border: 0.2em solid #770000;
+}
+
+.container {
+  display: block;
+  width: 75%;
+  margin: auto;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.line{
+  height: 0;
+  width: 100%;
+  margin: auto;
+  display: block;
+  border-top: 0.2em solid #770000;
+}
+input[type=text] {
+  width: 70%;
+  display: block;
+}

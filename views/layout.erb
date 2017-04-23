@@ -2,16 +2,22 @@
 <html>
 	<head>
 		<title>Caesar cipher</title>
+		<link href="/style.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
-		<%= yield %>
-		<br>
-		<form action = 'encrypt'>
-			<input type='text' name='Message' />
-			<input type='number' name='Shift' />
-			<input type="radio" name="mode" value="Encrypt" checked> Encrypt
-			<input type="radio" name="mode" value="Decrypt"> Decrypt
-			<input type='submit'/>
-		</form>
+		<div class="container">
+			<%= yield %>
+			<br>
+			<div class="line"></div>
+			<br>
+			<form action = 'encrypt'>
+				<input type='text' name='Message' class="message" />
+				<br>
+				<div>Shift: <input type='number' name='Shift' />
+				<input type="radio" name="mode" value="Encrypt" checked> Encrypt
+				<input type="radio" name="mode" value="Decrypt"> Decrypt
+				<input type='submit'/></div>
+			</form>
+		</div>
 	</body>
 </html>
